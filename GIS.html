@@ -28,7 +28,7 @@
             background-color: #fff;
         }
         .button {
-            background-color: #0078d4; /* Button background color */
+            background-color: #64ace4; /* Button background color */
             color: #fff; /* Text color */
             padding: 10px 20px; /* Padding around the button text */
             border: none; /* Remove button border */
@@ -37,7 +37,7 @@
             cursor: pointer; /* Show hand cursor on hover */
         }
         .project-image {
-           width: 300px;
+           width: 400px;
            height: auto;
         }
 
@@ -47,40 +47,62 @@
     <header>
         <h1>Ben Secor</h1>
         <p>Software Engineer / Data Engineer </p>
+        <a href="index.html" class="button">About Me</a>
+        <a href="GIS.html" class="button">GIS Maps</a>
+        <a href="CoffeeMaker.html" class="button">CoffeeMaker</a>
     </header>
-    <a href="index.html" class="button">About Me</a>
-    <a href="GIS.html" class="button">GIS Maps</a>
-    <a href="CoffeeMaker.html" class="button">CoffeeMaker</a>
     <div class="container">
-        <h2>Projects</h2>
+        <h1>GIS-Mapping Projects</h1>
         <p>
-            
+            Fall 2023 I took a course on advanced GIS Algorithmns. This project is a series of programs that effeciently compute and visualize viewshed, Flow, and sea-level rise.   
         </p>
 
-        <h1>GIS-Mapping</h1>
+        <h2> Viewshed </h2>
         <p>
-            Fall 2023 I took professor Toma's advanced algorithms GIS course. In the course I worked on a series of projectst that visual representations of viewshed, sea-level rise, drainage & flooding, contour elevation, aspect ratio, Hillshading, contour lines.   
+            The program computes and visualizes the points that are visible from a given input point on an .asc grid. The implementation I used is an exact implementation that takes 
+            cubic time, I plan on implementing radial sweep and horizon Algorithmns variations of this program to improve the run time. I plan on using the exact implementation as a benchamrk for accuracy statistics. 
+
+            Below is a visualization of viewshes from a point atop Mt.Rainer. The data set that was used contains 12gb of data with over 65 million points, my algortithim took about 2 hours to run. I hope to improve this by implementing more effecicent algorithmns in the future.  
+        </p>
+        <p>
+           <img src="mt_rainer_viewshed.png.jpeg" alt="viewshes from peak of Mt.Rainer" class="project-image">
+        </p>
+        <a href="https://github.com/BenSecor" target="_blank">Viewshed Link Coming Soon</a>
+
+        <h2> Flow </h2>
+        <p>
+            The program computes and visualizes the flow network derived from flow direction and flow accumulation based on an .asc file of points.
+            Below are 3 of the maps outputted by the program. 
         </p>
 
         <p>
-           Sea Level Rise
-           Uses a queue of boundary sea points to incrementally flood the land. Shown below is a map of North Truro and Provincetown MA. (the outermost points of cape cod). This code helps visualize flooding in a meaniful way, if configured to flood with the incrementally simulating slr every ten years can make meaning ful depictions regarding climate change and seal level rise. To better depict the results the flooding results are overlayed ontop of the hillshade. 
+            Elevation Gradient overlayed with Hillshade to visualize terrain
         </p>
+        <img src="flow-elev.png" alt="mountanous region hillshade and gradient" class="project-image">
+        
+        <p>
+            Flow Accumulation (yellow is 0 flow accumulation, while gray, blue, and dark blue represent increasing amounts of flow accumulation) 
+        </p>
+        <img src="flow.png" alt="visualization of water flow " class="project-image">
+       
+        <p>
+            Flow Accumulation overlayed with Hillshade
+        </p>
+        <img src="hillshade-flow.png" alt="flow overlayed with hillshade" class="project-image">
+        <p>
+           <a href="https://github.com/BenSecor" target="_blank">Flow Link Coming Soon</a>
+        </p>
+        
+        <h2> Sea Level Rise </h2>
+        <p>
+            Uses a queue of boundary sea points to incrementally flood the land. Shown below is a map of North Truro and Provincetown MA. This code helps visualize flooding by utilizing an array of colors and hillshading.  
+            results are consistent with other tools and softwarre used by goverment agencies. To better depict the results the flooding results are overlayed ontop of the hillshade. 
+         </p>
         <img src="SLR.png" alt="North Truro and Provincetown MA flood comptued incrementally 1ft from 0->20ft" class="project-image">
         <img src="SLR_ZOOM.png" alt="Zoomed in Provincetown MA flood comptued incrementally 1ft from 0->20ft " class="project-image">
-
-        <h2>Coffee Maker </h2>
         <p>
-            <a href="https://github.com/BenSecor/Coffee-Maker" target="_blank">Link to GitHub Repo</a>
+        <a href="https://github.com/BenSecor/Bsecor-SLR" target="_blank">Link to SLR GitHub Repo</a>
         </p>
-
-        <h2>FLOW</h2>
-        <p>
-            
-            
-        </p>
-
-        <!-- Add your other work experiences here -->
     </div>
 </body>
 </html>
