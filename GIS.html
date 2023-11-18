@@ -69,40 +69,35 @@
         </p>
         <a href="https://github.com/BenSecor/Viewshed" target="_blank">Link to Viewshed GitHub Repo</a>
 
-        <h2> Flow </h2>
-        <p>
-            The program computes and visualizes the flow network derived from flow direction and flow accumulation based on an .asc file of points.
-            Below are 3 of the maps outputted by the program. 
-        </p>
-
-        <p>
-            Elevation Gradient overlayed with Hillshade to visualize terrain
-        </p>
-        <img src="flow-elev.png" alt="mountanous region hillshade and gradient" class="project-image">
-        
-        <p>
-            Flow Accumulation (yellow is 0 flow accumulation, while gray, blue, and dark blue represent increasing amounts of flow accumulation) 
-        </p>
-        <img src="flow.png" alt="visualization of water flow " class="project-image">
-       
-        <p>
-            Flow Accumulation overlayed with Hillshade
-        </p>
-        <img src="hillshade-flow.png" alt="flow overlayed with hillshade" class="project-image">
-        <p>
-           <a href="https://github.com/BenSecor/Flow" target="_blank">Link to Flow GitHub Repo</a>
-        </p>
-        
-        <h2> Sea Level Rise </h2>
-        <p>
-            Uses a queue of boundary sea points to incrementally flood the land. Shown below is a map of North Truro and Provincetown MA. This code helps visualize flooding by utilizing an array of colors and hillshading.  
-            results are consistent with other tools and softwarre used by goverment agencies. To better depict the results the flooding results are overlayed ontop of the hillshade. 
-         </p>
-        <img src="SLR.png" alt="North Truro and Provincetown MA flood comptued incrementally 1ft from 0->20ft" class="project-image">
-        <img src="SLR_ZOOM.png" alt="Zoomed in Provincetown MA flood comptued incrementally 1ft from 0->20ft " class="project-image">
-        <p>
-        <a href="https://github.com/BenSecor/Bsecor-SLR" target="_blank">Link to SLR GitHub Repo</a>
-        </p>
+        <section id="flow-visualization">
+            <h2>Flow</h2>
+            <p>My program processes and visualizes flow accumulation. This visualization technique is paramount in identifying watersheds, understanding the flow of water through specific channels, and discerning areas prone to flooding or soil erosion.</p>
+            </p>
+      
+            <h3>Elevation Gradient and Hillshade Overlay</h3>
+            <p>Visualize terrain through the merging of elevation gradient and hillshade, offering a comprehensive view of the mountainous regions.</p>
+            <img src="flow-elev.png" alt="mountainous region hillshade and gradient" class="project-image">
+      
+            <h3>Flow Accumulation Visualization</h3>
+            <p>Witness the flow accumulation in vivid detail, where yellow denotes 0 accumulation (the wateshed boundaries) and shades of gray, blue, and dark blue represent increasing flow accumulation.</p>
+            <img src="flow.png" alt="visualization of water flow" class="project-image">
+      
+            <h3>Flow Accumulation Overlay with Hillshade</h3>
+            <p>The fusion of flow accumulation data and hillshade provides a nuanced perspective on water flow patterns.</p>
+            <img src="hillshade-flow.png" alt="flow overlayed with hillshade" class="project-image">
+      
+            <p>For more details and the program's code, visit the <a href="https://github.com/BenSecor/Flow" target="_blank">Flow GitHub Repository</a>.</p>
+          </section>
+      
+          <section id="sea-level-rise">
+            <h2>Sea Level Rise</h2>
+            <p>My program utilizes a boundary sea points queue to incrementally flood the land. Below are maps illustrating North Truro and Provincetown, MA, showcasing flooding results progressively incremented from 0 to 20 feet. The visualization, integrated with hillshading and utilizing an array of colors, ensures accuracy comparable to government agencies' tools.</p>
+            
+            <img src="SLR.png" alt="North Truro and Provincetown MA flood computed incrementally 1ft from 0->20ft" class="project-image">
+            <img src="SLR_ZOOM.png" alt="Zoomed in Provincetown MA flood computed incrementally 1ft from 0->20ft" class="project-image">
+      
+            <p>Explore the code and more details on the <a href="https://github.com/BenSecor/Bsecor-SLR" target="_blank">Sea Level Rise GitHub Repository</a>.</p>      
+        </section>
     </div>
 </body>
 </html>
