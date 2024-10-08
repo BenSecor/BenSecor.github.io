@@ -3,62 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben Secor - Software / Data Engineer </title>
+    <title>Ben Secor - Software / Data Engineer</title>
     <style>
-        /* Add your custom CSS styles here */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f2f5;
+            color: #333;
         }
         header {
             background-color: #0078d4;
             color: #fff;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
         }
-        h1 {
-            font-size: 24px;
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        header p {
+            font-size: 18px;
+            margin: 5px 0 20px;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #005ea6;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #003f75;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 900px;
+            margin: 40px auto;
             padding: 20px;
             background-color: #fff;
-        }.project-image {
-           width: 200px;
-           height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
-        .logo-image {
-           width: auto;
-           height: 200px;
+        h2 {
+            color: #0078d4;
+            font-size: 28px;
+            margin-top: 0;
         }
-        .button {
-            background-color: #64ace4; /* Button background color */
-            color: #fff; /* Text color */
-            padding: 10px 20px; /* Padding around the button text */
-            border: none; /* Remove button border */
-            border-radius: 5px; /* Rounded corners */
-            font-size: 16px; /* Text size */
-            cursor: pointer; /* Show hand cursor on hover */
+        .project-image, .logo-image {
+            display: block;
+            margin: 20px 0;
+            max-width: 100%;
+            height: auto;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0078d4;
+            color: #fff;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Ben Secor</h1>
-        <p>Software Engineer / Data Engineer</p>
-        <a href="index.html" class="button">About Me</a>
-        <a href="GIS.html" class="button">GIS Maps</a>
-        <a href="CoffeeMaker.html" class="button">CoffeeMaker</a>
+        <p></p>
+        <nav>
+            <a href="index.html">About Me</a>
+            <a href="GIS.html">GIS Maps</a>
+            <a href="CoffeeMaker.html">CoffeeMaker</a>
+            <a href="NYC_Traffic.html">NYC Traffic</a>
+        </nav>
     </header>
 
     <div class="container">
         <h2>About Me</h2>
         <img src="About_Me.jpeg" alt="Picture of me at my high school graduation in 2021" class="project-image">
         <p>
-            I am a junior at Bowdoin College studying Mathematics and Computer Science.
+            I am a Senior at Bowdoin College studying Mathematics and Computer Science.
             I am passionate about problem-solving and aspire to contribute meaningfully to the world through my work. 
             
             To view some of my recent projects, please click on the tabs above.
@@ -66,7 +101,7 @@
 
         <h2>Courses</h2>
         <p>
-            Software Engineering, Foundations of Computer Systems, Algorithms, GIS, Theory of Computation, Probability, Introduction to Mathematical Reasoning
+        
         </p>
 
         <h2>Work Experience</h2>
