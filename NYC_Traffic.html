@@ -22,9 +22,114 @@
             <a href="NYC_Traffic.html">NYC Traffic</a>
         </nav>
     </header>
-
     <div class="container">
-        Project Page for NYC Traffic Coming Soon!
+        <h2>Project Overview</h2>
+        <p>This project aims to analyze traffic patterns in New York City using various data sources, including traffic counts, census data, and air quality information. The analysis provides insights into traffic conditions, limitations of data sets, and the relationship between traffic and demographic factors.</p>
+
+        <h2>Limitations and Assumptions</h2>
+        <ul>
+            <li>Data does not account for gridlock conditions.</li>
+            <li>Missing street data may affect accuracy.</li>
+            <li>Interpolating point values to roads introduces some estimation error.</li>
+            <li>Data provides only one value per road segment.</li>
+        </ul>
+
+        <h2>Methods</h2>
+        <h3>Traffic Data Processing</h3>
+        <p>Traffic data was processed at different levels:</p>
+        <ul>
+            <li><strong>Raw Point Data:</strong> Initial data points collected from traffic sensors.</li>
+            <img src="NYC_TRAFFIC_by_POINTS.png" alt="Traffic Data as Points" class="project-image">
+            <li><strong>Street Segmented Data:</strong> Aggregated data based on road segments.</li>
+            <img src="NYC_TRAFFIC_by_Roads.png" alt="Traffic Data by Road" class="project-image">
+            <li><strong>Tract Level Data:</strong> Further aggregation to census tract level for analysis.</li>
+            <img src="NYC_TRAFFIC_by_Tract.png" alt="Traffic Data by Tract" class="project-image">
+        </ul>
+
+        <h3>Air Quality Index (AQI) Analysis</h3>
+        <p>Air quality data was compared with traffic patterns to explore potential correlations.</p>
+        
+        <img src="NYC_AQ_by_Tract.png" alt="Air Quality Index" class="project-image">
+        <h2>Results</h2>
+        <h3>Linear Regression Analysis - AQI</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Variable</th>
+                    <th>Slope</th>
+                    <th>P-Value</th>
+                    <th>R²</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Median Household Income</td>
+                    <td>0.000006</td>
+                    <td>&lt; 0.0001</td>
+                    <td>0.1408</td>
+                </tr>
+                <tr>
+                    <td>Black or African American Alone</td>
+                    <td>-0.0057</td>
+                    <td>&lt; 0.0001</td>
+                    <td>0.0410</td>
+                </tr>
+                <tr>
+                    <td>White Alone</td>
+                    <td>0.0049</td>
+                    <td>&lt; 0.0001</td>
+                    <td>0.0342</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Linear Regression Analysis - Traffic</h3>
+        <img src= "NYC_MED_HH_INC_by_Tract.png" alt="Median Household Income" class="project-image">
+        <table>
+            <thead>
+                <tr>
+                    <th>Variable</th>
+                    <th>Slope</th>
+                    <th>P-Value</th>
+                    <th>R²</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Median Household Income</td>
+                    <td>0.1547</td>
+                    <td>&lt; 0.0001</td>
+                    <td>0.0447</td>
+                </tr>
+                <tr>
+                    <td>White Alone</td>
+                    <td>150.0995</td>
+                    <td>&lt; 0.00001</td>
+                    <td>0.0140</td>
+                </tr>
+                <tr>
+                    <td>Black or African American Alone</td>
+                    <td>-145.5858</td>
+                    <td>&lt; 0.0001</td>
+                    <td>0.0114</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Future Improvements</h2>
+        <ul>
+            <li>Incorporate a larger raw data set for more accurate analysis.</li>
+            <li>Interpolate values for roads to improve data representation.</li>
+            <li>Normalize data based on the time of year to account for seasonal variations.</li>
+        </ul>
+
+        <h2>Data Sources</h2>
+        <ul>
+            <li>New York City Department of Transportation (NYC DOT). <a href="https://data.cityofnewyork.us/Transportation/Automated-Traffic-Volume-Counts/7ym2-wayt/about_data" target="_blank">Automated Traffic Counts</a></li>
+            <li>New York City Department of Office of Technology and Innovation (OTI). <a href="https://data.cityofnewyork.us/City-Government/road/svwp-sbcd" target="_blank">Roads Data</a></li>
+            <li>New York City Department of Health and Mental Hygiene (DOHMH). <a href="https://data.cityofnewyork.us/Environment/Air-Quality/c3uy-2p5r/about_data" target="_blank">Air Quality Data</a></li>
+            <li>National Historical Geographic Information System (NHGIS). <a href="https://data2.nhgis.org/main" target="_blank">2020 Census Tract</a></li>
+        </ul>
     </div>
     <footer>
         <h2>Contact Information</h2>
